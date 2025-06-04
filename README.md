@@ -1,1 +1,1 @@
-# andro-extended-specimen
+# Andropogoneae extended specimen project
