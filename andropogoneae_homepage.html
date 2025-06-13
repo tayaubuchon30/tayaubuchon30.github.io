@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andropogoneae Extended Specimen Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .banner-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e8f5e8;
+            border: 2px dashed #2c5530;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #2c5530;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .banner-image-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .plant-group-section, .data-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .plant-group-section h2, .data-section h2 {
+            margin-top: 0;
+        }
+        .plant-group-text, .data-text {
+            flex: 2;
+        }
+        .plant-group-image, .data-image {
+            flex: 1;
+            width: 300px;
+            height: 250px;
+            background-color: #e8f5e8;
+            border: 2px dashed #2c5530;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c5530;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 45px;
+        }
+        .plant-group-image-img, .data-image-img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+            flex-shrink: 0;
+            margin-top: 45px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            color: #2c5530;
+            border-bottom: 2px solid #2c5530;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #4a7c59;
+            margin-top: 30px;
+        }
+        .construction-notice {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .authors {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2c5530;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            color: #2c5530;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .funding {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/banner-collage.jpg" alt="Collection of Andropogoneae specimens and research" class="banner-image-img">
+    
+    <h1>Welcome to the Andropogoneae Extended Specimen Project!</h1>
+    
+    <div class="construction-notice">
+        <h2>This page is currently under construction; please contact Jordan Teisher jteisher@mobot.org with questions.</h2>
+    </div>
+    
+    <div class="authors">
+        <strong>Authors:</strong> J.K. Teisher, P. Smock, C.A. McAllister, T.M. AuBuchon-Elder, E.A. Kellogg
+    </div>
+    
+    <p>This project is designed to build functionality in Tropicos for creating extended specimen records. The goal with such records is to connect as much relevant data as possible directly to the specimen from which it was generated, without including other data from other conspecific specimens. In this project, the specimens include the standard herbarium metadata of collector, collector's number, collection date, locality, and herbarium barcode. The extended specimen then links to the specimen record additional data for <i>that particular specimen</i>. It specifically does not link general data from other specimens of the same species.</p>
+    
+    <div class="plant-group-section">
+        <div class="plant-group-text">
+            <h2>The Plant Group</h2>
+            <p>Our focal group is the grass tribe Andropogoneae, a central component of tropical grasslands throughout the world. Andropogoneae are C4 grasses that together cover ca. 15% of the earth's land surface. The tribe is monophyletic and includes ca. 1200 named species, although only about 2/3 of these are represented by digitized specimens. The group is economically pre-eminent among plant species because it includes maize, sorghum, and sugar cane, as well as a number of potential biofuels such as Miscanthus, species such as vetiveria cultivated for their essential oils that are the basis for many perfumes, and ones such as lemon grass that are used for flavoring foods. The species also provide valuable forage for livestock and wild animals.</p>
+        </div>
+        <img src="images/andropogoneae-specimens.jpg" alt="Andropogoneae grass specimens" class="plant-group-image-img">
+    </div>
+    
+    <p>This project grew out of a large genome sequencing project in which we attempted to generate sequences (short-read Illumina or long-read PacBio) for one or more representatives of all available species. This ended up being 572 distinct accessions of 496 species.</p>
+    
+    <div class="data-section">
+        <div class="data-text">
+            <h2>The Data</h2>
+            <p>For each specimen in the project, we have label data (locality, collector, date of collection, etc.), taxonomic identity, and one or more of the following:</p>
+            <ul>
+                <li>Images (herbarium sheet, three intact spikelets plus the same three spikelets dissected)</li>
+                <li>Spikelet measurements (from the images)</li>
+                <li>Genbank number(s)</li>
+                <li>Genome size (pg or bp DNA)</li>
+            </ul>
+            <p>These represent substantially different data types that have each required different data structures. For more detailed information on the data types and measurement protocols, visit the <a href="http://legacy.tropicos.org/projectwebportal.aspx?pagename=AboutData&projectid=100">About the Data</a> page.</p>
+        </div>
+        <img src="images/spikelet-data.jpg" alt="Spikelet measurements and data examples" class="data-image-img">
+    </div>
+    
+    <h2>Software Development</h2>
+    <p>Including each of these datatypes required development of new modules in tropicos and slight modifications of the structure of the database. A full description of the problems addressed and their solutions will be presented in a future publication.</p>
+    
+    <p>Here, as throughout Tropicos, we distinguish between the <i>specimen</i>, which is a single plant or a few small plants on a single sheet of paper, and a <i>collection</i>, which includes duplicate specimens collected at the same time and place. These duplicates are conventionally sent to other herbaria. Thus the specimen at MO (herbarium abbreviations following Thiers et al.) is distinct from the specimen at K or NY, but all may be part of the same collection.</p>
+    
+    <div class="funding">
+        <strong>Funding:</strong> The project was supported by the NSF PGRP-1822330 to Ed Buckler (Cornell and USDA-ARS) and NSF-DEB 1929514 to Elizabeth Kellogg (Danforth Plant Science Center).
+    </div>
+</body>
+</html>
