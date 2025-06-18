@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Data - Andropogoneae Extended Specimen Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        .banner-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e8f5e8;
+            border: 2px dashed #2c5530;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #2c5530;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .banner-image-img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #2c5530;
+            border-bottom: 2px solid #2c5530;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #4a7c59;
+            margin-top: 30px;
+        }
+        .intro-section, .images-section, .traits-section, .dna-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .intro-section h2, .images-section h2, .traits-section h2, .dna-section h2 {
+            margin-top: 0;
+        }
+        .intro-text, .images-text, .traits-text, .dna-text {
+            flex: 2;
+        }
+        .intro-image, .images-image, .traits-image, .dna-image {
+            flex: 1;
+            width: 300px;
+            height: 250px;
+            background-color: #e8f5e8;
+            border: 2px dashed #2c5530;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c5530;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 45px;
+        }
+        .intro-image-img, .images-image-img, .traits-image-img, .dna-image-img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+            flex-shrink: 0;
+            margin-top: 45px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .authors {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2c5530;
+        }
+        a {
+            color: #2c5530;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link">
+        <a href="andropogoneae_homepage.html">← Back to Project Home</a>
+    </div>
+
+    <img src="images/methods-banner.jpg" alt="Data collection methods and laboratory work" class="banner-image-img">
+    
+    <h1>About the Data</h1>
+    
+    <div class="intro-section">
+        <div class="intro-text">
+            <h2>Specimen Sampling</h2>
+            <p>We sampled material of all Andropogoneae species available at MO and K. For each nominal species, we chose up to three specimens, where possible chosen from disparate parts of the species' range. For each specimen, we removed three spikelet pairs for photography and measurement. We also removed a small sample of leaf material for DNA extraction. Specimens were annotated as appropriate.</p>
+            <p>For some species, we collected live or silica dried material that was subsequently documented with voucher specimens.</p>
+        </div>
+        <img src="images/specimen-sampling.jpg" alt="Specimen sampling and preparation process" class="intro-image-img">
+    </div>
+    
+    <div class="images-section">
+        <div class="images-text">
+            <h2>Images</h2>
+            <p>Herbarium sheets were imaged as part of ongoing digitization projects at MO and K. For each specimen, three spikelet pairs were removed. These were laid out on a black velvet background, labeled with specimen ID and scale bar, and photographed with a Canon EOS Digital Rebel XTi 10.1MP Digital SLR camera with a standard macro lens and ring flash, mounted on a copy stand as described by McAllister et al. (2018; <em>Philosophical Transactions of the Royal Society, Series B</em> 374: 20170403).</p>
+            <p>The three spikelet pairs were imaged twice, once intact and once dissected to separate sessile and pedicellate spikelets from each other and from the internode, pedicel and awn. The two images of spikelet pairs were uploaded to tropicos and linked to the specimen record.</p>
+        </div>
+        <img src="images/imaging-process.jpg" alt="Spikelet imaging setup and process" class="images-image-img">
+    </div>
+    
+    <div class="traits-section">
+        <div class="traits-text">
+            <h2>Trait Data</h2>
+            <p>Morphometric traits were measured from the spikelet images using a standardized (controlled) vocabulary. These traits included length of the sessile spikelet, pedicellate spikelet, internode, pedicel and awn, plus information on the density and distribution of trichomes and prickles.</p>
+            <p>We deliberately did not attempt to develop an ontology, i.e., relationships among the traits, nor did we attempt to use terminology to assess homology between grass structures and those of other plant families. This simplification permitted rapid data entry and interpretation.</p>
+        </div>
+        <img src="images/trait-measurements.jpg" alt="Morphometric trait measurement examples" class="traits-image-img">
+    </div>
+    
+    <div class="dna-section">
+        <div class="dna-text">
+            <h2>DNA Sequencing</h2>
+            <p>Methods for DNA extraction, sequencing, and gene and genome assembly are available from Schulz et al., bioRxiv, <em>Fishing for a reelGene: evaluating gene models with evolution and machine learning</em>, <a href="https://www.biorxiv.org/content/10.1101/2023.09.19.558246v2.full.pdf" target="_blank">https://www.biorxiv.org/content/10.1101/2023.09.19.558246v2.full.pdf</a> and from Stitzer et al., bioRxiv, <em>Extensive genome evolution distinguishes maize within a stable tribe of grasses</em>, <a href="https://www.biorxiv.org/content/10.1101/2025.01.22.633974v1" target="_blank">https://www.biorxiv.org/content/10.1101/2025.01.22.633974v1</a>.</p>
+        </div>
+        <img src="images/dna-sequencing.jpg" alt="DNA extraction and sequencing laboratory work" class="dna-image-img">
+    </div>
+</body>
+</html>
